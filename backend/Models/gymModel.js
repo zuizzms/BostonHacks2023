@@ -5,29 +5,29 @@ const Schema = mongoose.Schema
 const gymSchema = new Schema({
     gymName: {
         type: String,
-        required: truek
+        //required: true
     },
     address: {
         type: String,
-        required: true
+        //required: true
     },
     numRatings: {
         type: Number,
-        required: true
+        //required: true
     },
     lgbtRating: {
         type: Number,
-        required: true
+        //required: true
     },
     genderRating: {
         type: Number,
-        required: true
+        //required: true
     },
     ageRating: {
         type: Number,
-        required: true
+        //required: true
     }
 
 })
 
-module.exports = mongoose.model('Gym', gymSchema)
+module.exports = mongoose.model('gyms', gymSchema)
