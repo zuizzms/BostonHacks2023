@@ -17,7 +17,25 @@ app.use((req, res, next) => {
         next()
 })
 
-// app.use("/ratings",)
+// routes
+
+//Search page
+app.get('/searchGyms', (req, res) => {
+        params = req.params
+        console.log("working")
+        return "Hello World"
+})
+//Individual gym page
+app.get('/getGym', (req, res) => {
+        params = req.params
+        console.log("working")
+        return "Hello World"
+})//Search page
+app.put('/updateRating', (req, res) => {
+        params = req.params
+        console.log("working")
+        return "Hello World"
+})
 
 mongoose.connect("mongodb+srv://zuizzms:bostonhacks2023@cluster0.dnmuxsi.mongodb.net/?retryWrites=true&w=majority")
         .then(() => {
@@ -30,6 +48,8 @@ mongoose.connect("mongodb+srv://zuizzms:bostonhacks2023@cluster0.dnmuxsi.mongodb
                 //         res.setHeader('Content-Type', 'text/html');  
                 //         res.end('<html><body><h1>This is a test server</h1></body></html>'); 
                 // }); 
+        }).catch((error) => {
+                console.log(error)
         })
   
 // sample_server.listen(port, hostname, ()=> { 
