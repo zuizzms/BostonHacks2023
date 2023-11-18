@@ -46,6 +46,9 @@ export function Rating(gymName){
                        onChange = {(event) => setAgeRating(event.target.value)}
                        required>
                 </input>
+                <Link to = "gym">
+                    <button>Submit Rating</button>
+                </Link>
             </div>
         </Wrapper>
     )
