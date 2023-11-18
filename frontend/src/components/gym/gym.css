@@ -1,0 +1,43 @@
+.main-content{
+    background-color: black;
+    color: cornsilk;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+}
+
+.gym-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkred;
+}
+
+.gym-header h1{
+    font-size: calc(2px + 2vh);
+    justify-content: left;
+}
+
+.gym-header h3{
+    font-size: calc(1.5px + 2vh);
+    justify-content: right;
+}
+
+.gym-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rating h5{
+    font-size: calc(1.3px + 2vh);
+}
+
+.rating button{
+    font-size: calc(1.3px + 2vh);
+}
