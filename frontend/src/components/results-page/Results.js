@@ -1,11 +1,10 @@
-import Header from '../../Header/Header';
 import './Results.css';
 
-function Search() {
+function Results() {
   return (
-    <div className="Search">
+    <div className="results-div">
     </div>
   );
 }
 
-export default Search;
+export default Results;

@@ -6,10 +6,12 @@ function Header() {
     <div className='header-div'>
 
       <div className='header-left'> 
-        <h1 className='header-app-name'>RateMyGym</h1>
+        <NavLink className='header-home-link' to='/'>
+          <h1 className='header-app-name' >RateMyGym</h1>
+        </NavLink>
       </div>
       <div className='header-right' >
-        <NavLink className='log-in-link' to='/results'>Log in</NavLink>
+        <NavLink className='header-log-in-link' to='/results'>Log in</NavLink>
       </div>
 
     </div>

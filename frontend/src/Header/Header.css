@@ -1,5 +1,5 @@
 .header-div { 
-  background-color: aqua;
+  background-color: gray;
   display: flex; 
   justify-content: space-between;
   align-items: center;
@@ -9,6 +9,24 @@
   margin-left: 20px;
 }
 
+.header-home-link { 
+  text-decoration: none;
+}
+
+.header-app-name { 
+  text-decoration: none;
+  color: white;
+}
+
 .header-right { 
   margin-right: 20px;
+}
+
+.header-log-in-link { 
+  text-decoration: none;
+  color: white;
+}
+
+.header-log-in-link:hover{ 
+  text-decoration: underline;
 }
