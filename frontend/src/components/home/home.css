@@ -1,7 +1,29 @@
 .main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  background-color: black;
+  color: cornsilk;
+  font-family: Roboto;
+  font-size: calc(5px + 2vw);
 
 }
 
 .home-results-button { 
-  color: red;
+  color: white;
+  background-color: darkred;
+  border-color: red;
+  border-width: calc(2px + 2vw);
+  font-size: calc(4.8px + 2vw);
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#nav-wrapper{
+  justify-content: center;
+  align-self: center;
+  text-align: center;
 }
