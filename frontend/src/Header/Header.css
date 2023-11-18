@@ -1,0 +1,14 @@
+.header-div { 
+  background-color: aqua;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left { 
+  margin-left: 20px;
+}
+
+.header-right { 
+  margin-right: 20px;
+}
