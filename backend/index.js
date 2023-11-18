@@ -67,7 +67,7 @@ app.put('/updateRating', async(req, res) => {
         }
 })
 
-mongoose.connect("mongodb+srv://zuizzms:bostonhacks2023@cluster0.dnmuxsi.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://jeff:bostonhacks2023@cluster0.dnmuxsi.mongodb.net/?retryWrites=true&w=majority")
         .then(() => {
                 app.listen(port, () => {
                         console.log("connected to DB and listening on port" + port)
