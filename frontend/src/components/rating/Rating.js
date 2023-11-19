@@ -62,72 +62,73 @@ function Rating() {
     if (!data) {
         return null
     }
-    return(
+    return (
         <Wrapper>
-            <div className = "rating-header">
+            <div className="rating-header">
                 <h2>{data.gymName}</h2>
                 <h4>Rate this gym according to these categories!</h4>
             </div>
-            <div className = "rating-body">
-                <label id = "lgbtq">LGBTQ+ Friendliness</label>
-                {/* <input type = "text"
-                       placeholder = "Number from 1 to 5"
-                       name = "lgbtqFriendliness"
-                       id = "textInput"
-                       value = {lgbtqRating}
-                       onChange = {(event) => setLGBTRating(event.target.value)}
-                       required>
-                </input> */}
-                <div class="slidingcontainer">
-                    <input type="range"
-                    min="1"
-                    max="5"
-                    step="0.1"
-                    value={lgbtqRating}
-                    class="slider"
-                    id="myRange"
-                    onChange = {(event) => setLGBTRating(event.target.value)}
-                    required>
-                    </input>
+            <div className="rating-body">
+                <div>
+                    <label id="lgbtq" style={{ color: 'white' }}>Diversity</label>
+                    <div className="slidingcontainer">
+                        <input
+                            type="range"
+                            min="1"
+                            max="5"
+                            step="0.1"
+                            value={lgbtqRating}
+                            className="slider"
+                            id="lgbtqRange"
+                            onChange={(event) => setLGBTRating(event.target.value)}
+                            required
+                        />
+                    </div>
                 </div>
-                <label id = "gender">Gender Diversity</label>
-                <div class="slidingcontainer">
-                    <input type="range"
-                    min="1"
-                    max="5"
-                    step="0.1"
-                    value={genderRating}
-                    class="slider"
-                    id="myRange"
-                    onChange = {(event) => setGenderRating(event.target.value)}
-                    required>
-                    </input>
+                <div>
+                    <label id="gender" style={{ color: 'white' }}>Dedication</label>
+                    <div className="slidingcontainer">
+                        <input
+                            type="range"
+                            min="1"
+                            max="5"
+                            step="0.1"
+                            value={genderRating}
+                            className="slider"
+                            id="genderRange"
+                            onChange={(event) => setGenderRating(event.target.value)}
+                            required
+                        />
+                    </div>
                 </div>
-                <label id = "age">Age Diversity</label>
-                <div class="slidingcontainer">
-                    <input type="range"
-                    min="1"
-                    max="5"
-                    step="0.1"
-                    value={ageRating}
-                    class="slider"
-                    id="myRange"
-                    onChange = {(event) => setAgeRating(event.target.value)}
-                    required>
-                    </input>
+                <div>
+                    <label id="age" style={{ color: 'white' }}>Sense of Community</label>
+                    <div className="slidingcontainer">
+                        <input
+                            type="range"
+                            min="1"
+                            max="5"
+                            step="0.1"
+                            value={ageRating}
+                            className="slider"
+                            id="ageRange"
+                            onChange={(event) => setAgeRating(event.target.value)}
+                            required
+                        />
+                    </div>
                 </div>
-                <button onClick = {sendToDB}>Submit</button>
-                <div className = "alert-window" style = {{visibility: boxVisible ? 'visible':'hidden'}}>
-                    <div className = "alert-window-child">
+                <button onClick={sendToDB}>Submit</button>
+                <div className="alert-window" style={{ visibility: boxVisible ? 'visible' : 'hidden' }}>
+                    <div className="alert-window-child">
                         <p>Thank you for rating!</p>
-                        <NavLink className='result-link' to={`/Gym/${encodeURIComponent(documentID)}`}>
-                        <button>Go Back to the Gym Page</button>
+                        <NavLink className="result-link" to={`/Gym/${encodeURIComponent(documentID)}`}>
+                            <button>Go Back to the Gym Page</button>
                         </NavLink>
                     </div>
                 </div>
             </div>
         </Wrapper>
-    )
+    );
 }
 
 export default Rating;

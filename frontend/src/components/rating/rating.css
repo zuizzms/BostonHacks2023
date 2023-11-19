@@ -1,8 +1,9 @@
 .rating-header{
     display: flex;
     flex-direction: column;
-    background-color: darkred;
+    background-color: rgb(29, 97, 243);
     z-index: 0.5;
+    text-align: center
 
 }
 
@@ -22,6 +23,7 @@
     justify-content: center;
     color: black;
     width: 80%;
+    text-align: center
 
 }
 
