@@ -34,6 +34,12 @@
   justify-content: center;
   text-align: center;
   border-radius: 75%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home-results-button:hover {
+  background-color: rgba(255, 0, 0, 100%);
+  color: black; /* Change text color on hover */
 }
 
 #nav-wrapper{
