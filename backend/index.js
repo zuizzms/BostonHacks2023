@@ -1,3 +1,4 @@
+const cors = require('cors')
 const express=require('express'), 
 http=require('http'); 
 const hostname='localhost'; 
@@ -9,9 +10,9 @@ const app=express();
 
 // const sample_server=http.createServer(app); 
 
-// app.use(cors({
-//         origin: '*'
-// }))
+app.use(cors({
+        origin: '*'
+}))
 
 app.use(express.json())
 app.use((req, res, next) => {
