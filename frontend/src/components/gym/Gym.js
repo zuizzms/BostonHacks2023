@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "./gym.css";
 
 const Wrapper = styled.div`
@@ -21,9 +21,9 @@ export function Gym(gymName, gymAddress, oRating, lRating, gRating, aRating){
                 <div className = "gym-body">
                     <div className = "rating">
                         <h5>{oRating} Overall</h5>
-                        <Link to = "rate">
+                        <NavLink to = "/rating">
                             <button>Rate this Gym</button>
-                        </Link>
+                        </NavLink>
                     </div>
                     <p>LGBTQ+ Friendliness: {lRating}</p>
                     <p>Gender Diversity: {gRating}</p>

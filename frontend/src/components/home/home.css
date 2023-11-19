@@ -12,6 +12,13 @@
   position: absolute;
   margin-top: auto;
   margin-bottom: 50vh;
+  @media screen and (max-width: 700px){
+    position: fixed;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+  }
 }
 
 .home-results-button { 
@@ -38,4 +45,7 @@ img{
   object-fit: fill;
   overflow: hidden;
   position: relative;
+  @media screen and (max-width: 700px){
+    
+  }
 }
