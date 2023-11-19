@@ -20,11 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
-    color: cornsilk;
-    font-family: Roboto;
-
-    width: 70%;
+    color: black;
+    width: 80%;
 
 }
 

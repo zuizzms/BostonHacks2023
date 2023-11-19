@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import "./home.css"
-import gymPic from "./images/MK4_8202-16x9-1-1600x900-1670337171.jpg"
+import "./home.css";
 import { NavLink } from 'react-router-dom';
 
 function Home(){
