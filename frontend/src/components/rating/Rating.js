@@ -82,6 +82,7 @@ function Rating() {
                     <input type="range"
                     min="1"
                     max="5"
+                    step="0.1"
                     value={lgbtqRating}
                     class="slider"
                     id="myRange"
@@ -94,6 +95,7 @@ function Rating() {
                     <input type="range"
                     min="1"
                     max="5"
+                    step="0.1"
                     value={genderRating}
                     class="slider"
                     id="myRange"
