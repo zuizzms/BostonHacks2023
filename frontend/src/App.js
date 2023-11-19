@@ -4,6 +4,7 @@ import Header from './Header/Header'
 import Results from './components/results-page/Results';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
+import Gym from './components/gym/Gym';
 import React, {useState, useEffect} from 'react';
 
 
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Results" element={<Results />} />
+          <Route path="/Gym" element={<Gym />} />
         </Routes>
           <Footer/>
       </BrowserRouter>
