@@ -1,4 +1,11 @@
 #footer{
-    padding: 1vh 1vw;
     background-color: grey;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    margin: 0px;
 }

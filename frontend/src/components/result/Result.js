@@ -6,17 +6,20 @@ import { NavLink } from 'react-router-dom';
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction:column;
+  align-self: center;
+  background-color: darkslategrey;
 `;
 
 
 
-function Result({gymName, gymAddress, gymRating}) {
+function Result({documentID, gymName, gymAddress, gymRating}) {
 
 
 
   return (
        <Wrapper> 
-          <NavLink className='result-link' to='/gym'> 
+          <NavLink className='result-link' to={`/Gym/${encodeURIComponent(documentID)}`}> 
             <div className="result-div"> 
               <h1 className='gym-name'>{gymName}</h1> 
               <h2 className='gym-adress'>{gymAddress}</h2> 

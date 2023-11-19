@@ -1,16 +1,31 @@
-.main-content{
-    background-color: black;
+.gym-div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin: auto;
+}
+
+.main-content2{
+    background-color: lightskyblue;
     color: cornsilk;
     display: flex;
     flex-direction: column;
-    font-family: Roboto;
+    font-family: "Lucida Console";
+
 }
 
 .gym-header{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: darkred;
+    background-color: blue;
+    opacity: 80%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
 }
 
 .gym-header h1{
@@ -26,6 +41,9 @@
 .gym-body{
     display: flex;
     flex-direction: column;
+    width: 70%;
+    margin: auto;
+    background-color: lightskyblue;
 }
 
 .rating{
@@ -40,4 +58,13 @@
 
 .rating button{
     font-size: calc(1.3px + 2vw);
+    background-color: black;
+    border-color: white;
+    color: white;
+    padding: 1vw;
+    border-width: 0.2vw;
+}
+
+.gym-body p{
+    font-size: calc(1.5px + 1.5vw);
 }

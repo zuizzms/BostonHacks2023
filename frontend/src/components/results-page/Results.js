@@ -16,7 +16,7 @@ function Results() {
             key={result.gymName}
             documentID= {result._id}
             gymName={result.gymName}
-            gymAddress={result.gymAddress} 
+            gymAddress={result.address}
             gymRating={result.gymRating}
           />
           ))}

@@ -25,14 +25,14 @@ function Gym() {
         <div className='gym-div'> 
              <div className = " in-content">
                 <div className = "gym-header">
-                    <h1>{gymName}</h1>
-                    <h3>{gymAddress}</h3>
+                    <h1>Gym Name Placeholder</h1>
+                    <h3>Gym Address Placeholder</h3>
                 </div>
                 <div className = "gym-body">
                     <div className = "rating">
-                        <h5>{oRating} Overall</h5>
-                        <NavLink to = "/rating">
-                            <button>Rate this Gym</button>
+                        <h5> Overall</h5>
+                        <NavLink className='result-link' to={`/Rating/${encodeURIComponent(documentID)}`}>
+                        <button>Rate this Gym</button>
                         </NavLink>
                     </div>
                     <p>LGBTQ+ Friendliness: {data.lgbtRating}</p>
@@ -43,3 +43,5 @@ function Gym() {
         </div>
     )
 }
+
+export default Gym;
