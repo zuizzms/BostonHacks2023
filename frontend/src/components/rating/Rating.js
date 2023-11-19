@@ -1,13 +1,15 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import "./rating.css";
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: 80%;
 `
-export function Rating(gymName){
+function Rating(gymName){
 
     const[lgbtqRating, setLGBTRating] = useState('');
     const[genderRating, setGenderRating] = useState('');
@@ -46,10 +48,12 @@ export function Rating(gymName){
                        onChange = {(event) => setAgeRating(event.target.value)}
                        required>
                 </input>
-                <Link to = "gym">
+                <NavLink to = "/gym">
                     <button>Submit Rating</button>
-                </Link>
+                </NavLink>
             </div>
         </Wrapper>
     )
 }
+
+export default Rating;
