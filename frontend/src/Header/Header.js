@@ -2,6 +2,13 @@ import './Header.css';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
+
+    const [loggedIn, setLoggedIn] = useState(false);
+
+    const logIn = () => {
+        setLoggedIn(true);
+    }
+
   return (
     <div className='header-div'>
 

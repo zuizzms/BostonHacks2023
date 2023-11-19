@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   margin: 80%;
 `
-function Rating(gymName){
+function Rating(gymID){
 
     const[lgbtqRating, setLGBTRating] = useState('');
     const[genderRating, setGenderRating] = useState('');
