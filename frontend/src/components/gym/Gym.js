@@ -5,7 +5,7 @@ import "./gym.css";
 import { useParams } from "react-router-dom";
 
 function Gym(){
-    const { DocumentId } = useParams();  
+    const { documentID } = useParams();
 
     
     return(
@@ -18,8 +18,8 @@ function Gym(){
                 <div className = "gym-body">
                     <div className = "rating">
                         <h5> Overall</h5>
-                        <NavLink to = "/rating">
-                            <button>Rate this Gym</button>
+                        <NavLink className='result-link' to={`/Rating/${encodeURIComponent(documentID)}`}>
+                        <button>Rate this Gym</button>
                         </NavLink>
                     </div>
                     <p>LGBTQ+ Friendliness: </p>
