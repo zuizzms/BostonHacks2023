@@ -1,5 +1,6 @@
 import './Result.css';
 import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
 
 
 const Wrapper = styled.div`
@@ -14,13 +15,15 @@ function Result({gymName, gymAddress, gymRating}) {
 
 
   return (
-    <Wrapper> 
-        <div className="result-div"> 
-        <h1>{gymName}</h1> 
-        <h2>{gymAddress}</h2> 
-        <h2>{gymRating}</h2>
-      </div>
-    </Wrapper>
+       <Wrapper> 
+          <NavLink className='result-link' to='/gym'> 
+            <div className="result-div"> 
+              <h1 className='gym-name'>{gymName}</h1> 
+              <h2 className='gym-adress'>{gymAddress}</h2> 
+              <h2 className='gym-rating'>{gymRating}</h2>
+            </div>
+          </NavLink>
+       </Wrapper>
   );
 }
 
