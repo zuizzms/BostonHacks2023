@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     background-color: darkred;
+    z-index: 0.5;
 }
 
 .rating-header h2{
@@ -21,6 +22,7 @@
     background-color: black;
     color: cornsilk;
     font-family: Roboto;
+    z-index: 0.5;
 }
 
 .rating-body input{
@@ -28,4 +30,33 @@
     color: black;
     background-color: cornsilk;
     border-width: 5vw;
+}
+
+.alert-window{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.alert-window-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    background-color: black;
+    opacity: 70%;
+}
+
+.alert-window-child p{
+    color: cornsilk;
+    font-size: calc(1.5px + 2vw);
+}
+
+.alert-window-child button{
+    font-size: calc(1.5px + 2vw);
+    color: cornsilk;
+    background-color: darkred;
+    border-color: red;
+    border-width: calc(1px + 2vw);
 }
