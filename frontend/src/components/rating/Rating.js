@@ -63,7 +63,7 @@ function Rating() {
         return null
     }
     return (
-        <Wrapper>
+        <div className='rating-div'>
             <div className="rating-header">
                 <h2>{data.gymName}</h2>
                 <h4>Rate this gym according to these categories!</h4>
@@ -122,12 +122,12 @@ function Rating() {
                     <div className="alert-window-child">
                         <p>Thank you for rating!</p>
                         <NavLink className="result-link" to={`/Gym/${encodeURIComponent(documentID)}`}>
-                            <button>Go Back to the Gym Page</button>
+                            <button className="rating-button">Go Back to the Gym Page</button>
                         </NavLink>
                     </div>
                 </div>
             </div>
-        </Wrapper>
+        </div>
     );
 }
 

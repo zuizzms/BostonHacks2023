@@ -1,20 +1,25 @@
+.rating-div { 
+    min-height: calc(100vh - 230px);
+}
+
 .rating-header{
     display: flex;
     flex-direction: column;
-    background-color: rgb(29, 97, 243);
+    background-color: black;
     z-index: 0.5;
-    text-align: center
-
+    text-align: center;
+    margin-top: 50px;
 }
 
 .rating-header h2{
-    color: cornsilk;
+    color: white;
     font-size: calc(2px + 2vw);
 }
 
 .rating-header h4{
-    color: cornsilk;
+    color: white;
     font-size: calc(1.8px + 2vw);
+    margin-top: 5px;
 }
 
 .rating-body{
@@ -61,9 +66,28 @@
 }
 
 .alert-window-child button{
-    font-size: calc(1.5px + 2vw);
+    font-size: 18px;
     color: cornsilk;
-    background-color: darkred;
-    border-color: red;
+    background-color: rgb(29, 97, 243);
     border-width: calc(1px + 2vw);
+    height: 60px;
 }
+
+
+.rating-button { 
+    background-color: rgb(29, 97, 243);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    width: 150px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .rating-button:hover { 
+    cursor: pointer;
+    opacity: 0.8;
+  }
