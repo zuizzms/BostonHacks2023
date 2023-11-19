@@ -4,17 +4,18 @@ import Header from './Header/Header'
 import Results from './components/results-page/Results';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
+import React, {useState, useEffect} from 'react';
 
 
 function App() {
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetch('https://api.example.com/data')
-      .then(response => response.json())
-      .then(json => setData(json))
-      .catch(error => console.error(error));
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://api.example.com/data')
+  //     .then(response => response.json())
+  //     .then(json => setData(json))
+  //     .catch(error => console.error(error));
+  // }, []);
 
   return (
     <div className="App">

@@ -1,7 +1,12 @@
 import './Results.css';
 import Result from '../result/Result';
+import React, {useEffect, useState} from "react"
+import axios from 'axios';
+import useSWR from 'swr'
 
 function Results() {
+
+  const {data} = useSWR('/gyms', () => fetch('http://localhost:8080/gyms').then(res => res.json()))
 
   const Results = [
       {
@@ -20,13 +25,14 @@ function Results() {
         gymRating: "3.5"
       }
     ];
-  
 
   return (
     <div className="results-div"> 
       <div className="results-list">
-        {Results.map(result => (
+        {data?.map(result => (
           <Result 
+            key={result.gymName}
+            // id={result.query.id}
             gymName={result.gymName}
             gymAddress={result.gymAddress} 
             gymRating={result.gymRating}
