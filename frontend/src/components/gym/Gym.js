@@ -35,9 +35,9 @@ function Gym() {
                         <button>Rate this Gym</button>
                         </NavLink>
                     </div>
-                    <p>LGBTQ+ Friendliness: {data.lgbtRating}</p>
-                    <p>Gender Diversity: {data.genderRating}</p>
-                    <p>Age Diversity: {data.ageRating}</p>
+                    <p>LGBTQ+ Friendliness:</p>
+                    <p>Gender Diversity: </p>
+                    <p>Age Diversity:</p>
                 </div>
             </div>
         </div>

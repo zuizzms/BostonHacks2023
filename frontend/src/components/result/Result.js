@@ -3,14 +3,6 @@ import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction:column;
-  align-self: center;
-  background-color: darkslategrey;
-`;
-
 
 
 function Result({documentID, gymName, gymAddress, gymRating}) {
@@ -18,15 +10,16 @@ function Result({documentID, gymName, gymAddress, gymRating}) {
 
 
   return (
-       <Wrapper> 
-          <NavLink className='result-link' to={`/Gym/${encodeURIComponent(documentID)}`}> 
-            <div className="result-div"> 
-              <h1 className='gym-name'>{gymName}</h1> 
-              <h2 className='gym-adress'>{gymAddress}</h2> 
-              <h2 className='gym-rating'>{gymRating}</h2>
+       <div className='result-div'>
+            <div className="result-gyms"> 
+              <NavLink className='result-link' to={`/Gym/${encodeURIComponent(documentID)}`}> 
+                <h1 className='gym-name'>{gymName}</h1> 
+                <h2 className='gym-address'>{gymAddress}</h2> 
+                <h2 className='gym-rating'>{gymRating}</h2>
+              </NavLink>
             </div>
-          </NavLink>
-       </Wrapper>
+    
+       </div>
   );
 }
 

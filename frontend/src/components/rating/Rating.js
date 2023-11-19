@@ -53,14 +53,10 @@ function Rating(){
             </div>
             <div className = "rating-body">
                 <label id = "lgbtq">LGBTQ+ Friendliness</label>
-                <input type = "text"
-                       placeholder = "Number from 1 to 5"
-                       name = "lgbtqFriendliness"
-                       id = "textInput"
-                       value = {lgbtqRating}
-                       onChange = {(event) => setLGBTRating(event.target.value)}
-                       required>
-                </input>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </input>
+                </div>
                 <label id = "gender">Gender Diversity</label>
                 <input type = "text"
                        placeholder = "Number from 1 to 5"

@@ -1,5 +1,5 @@
 #footer{
-    background-color: grey;
+    background-color: white;
     height: 90px;
     display: flex;
     justify-content: center;
@@ -8,4 +8,6 @@
 
 .footer-text {
     margin: 0px;
+    color: rgb(29, 97, 243); 
+    font-weight: 700;
 }

@@ -1,5 +1,5 @@
 .header-div { 
-  background-color: gray;
+  background-color: white;
   display: flex; 
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,8 @@
 
 .header-app-name { 
   text-decoration: none;
-  color: white;
+  color: rgb(29, 97, 243);
+  font-size: 30px;
 }
 
 .header-right { 

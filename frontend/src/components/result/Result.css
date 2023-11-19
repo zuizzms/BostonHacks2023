@@ -1,52 +1,41 @@
 .result-div { 
-<<<<<<< HEAD
-  display: flexbox;
-  justify-content: space-between;
-  background-color: rgb(20, 70, 170);
-  width: 80vw;
-  padding: 30px;
+  margin-top: 40px;
 }
-
-.result-div:hover {
-  background-color: rgb(17, 57, 135);
-=======
-  background-color: lightskyblue;
-  width: 65%;
+.result-gyms { 
+  background-color: rgb(29, 97, 243);
+  width: 55%;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-self: center;
   text-align: center;
   margin: auto;
   border-radius: 15px;
-  font-family: "Lucida Console"
+  color: white;
 }
 
-.result-div:hover{
-  background-color:blue;
->>>>>>> main
+.result-gyms:hover { 
+  cursor: pointer; 
+  opacity: 0.8;
 }
+
 
 .result-link { 
   text-decoration: none;
   color: white;
-  margin-top: 20px;
 }
 
-.result-div h1{
-  font-size: calc(4px + 3vw);
-}
-
-.result-div h2{
-  font-size: calc(1px + 1.5vw);
+.result-link:hover { 
+  cursor: pointer; 
+  opacity: 0.8;
 }
 
 .gym-name {
-
+  margin: 0px;
 }
 
 .gym-address {
-
-}
-
-.gym-rating {
-
+  margin: 0px;
+  height: 25px;
+  font-style: italic;
 }
