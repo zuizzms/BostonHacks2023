@@ -8,8 +8,9 @@ const Wrapper = styled.div`
   justify-content: center;
   margin: 80%;
 `
-export function Gym(gymName, gymAddress, oRating, lRating, gRating, aRating){
-
+export function Gym(documentId){
+    const url = 'http://localhost:8080/api/gym/' + documentId;
+    const {data} = useSWR('api/gym/', () => fetch(url).then(res => res.json()))
 
     return(
         <Wrapper>

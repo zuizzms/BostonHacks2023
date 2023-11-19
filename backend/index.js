@@ -22,10 +22,10 @@ app.use((req, res, next) => {
 // ROUTES
 
 //Search page
-app.get('/gyms', async(req, res) => {
+app.get('/api/gyms/', async(req, res) => {
         try {
                 const allGyms = await Gym.find({});
-                console.log(allGyms)
+                console.log(req.params.id)
                 res.status(200).json(allGyms)
         } catch (error) {
                 console.log(error.message);
@@ -33,23 +33,20 @@ app.get('/gyms', async(req, res) => {
         }
 })
 //Individual gym page
-app.get('/gym', async(req, res) => {
+app.get('/api/gym/:id', async(req, res) => {
         try {
-                const id = req.query.id;
+                const id = req.params.id;
+                console.log()
                 const gym = await Gym.findById(id)
                 res.status(200).json(gym)
         } catch (error) {
                 res.status(500).json({message: error.message})
         }
 })//Update rating
-app.put('/updateRating/:id', async(req, res) => {
+app.put('/updateRating', async(req, res) => {
         try {
                 const id = req.query.id;
                 const updateData = req.body;
-                // const {id} = '65593c776c8fe91a2e03ce17'
-                // const testBody = {
-                //         "gymName" : "BBBB"
-                // };
 
                 const data = await Gym.findById(id)
 
