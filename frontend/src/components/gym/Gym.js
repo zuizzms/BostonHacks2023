@@ -36,15 +36,28 @@ function Gym() {
                     <h3>{data.address}</h3>
                 </div>
                 <div className = "gym-body">
-                    <div className = "rating">
-                        <h5> Overall</h5>
-                        <NavLink className='result-link' to={`/Rating/${encodeURIComponent(documentID)}`}>
-                        <button>Rate this Gym</button>
-                        </NavLink>
-                    </div>
-                    <p>LGBTQ+ Friendliness: {data.lgbtRating}</p>
-                    <p>Gender Diversity: {data.genderRating}</p>
-                    <p>Age Diversity: {data.ageRating}</p>
+                    <h2 className="gym-category">Diversity: 
+                        <div class="slidecontainer">
+                                <input type="range" min="1" max="5" value={data.lgbtRating} class="slider" id="myRange"></input>
+                        </div>
+                    </h2>
+
+                        <p className="gym-category-description">Of gender, age, LGBTQ+</p>
+                    <h2 className="gym-category">Dedication: 
+                    <div class="slidecontainer">
+                            <input type="range" min="1" max="5" value={data.genderRating} class="slider" id="myRange"></input>
+                        </div>
+                    </h2>
+                        <p className="gym-category-description">Average gym goers or competitive bodybuilders?</p>
+                    <h2 className="gym-category">Sense of Community: 
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="5" step='0.1' value={data.ageRating} class="slider" id="myRange"></input>
+                        </div>
+                    </h2>
+                        <p className="gym-category-description">Friendly and supportive of each others goals</p>
+                <NavLink className='result-link' to={`/Rating/${encodeURIComponent(documentID)}`}>
+                         <button className="gym-button">Rate this Gym</button>
+                </NavLink>
                 </div>
             </div>
         </div>

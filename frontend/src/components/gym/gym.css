@@ -1,6 +1,6 @@
 .gym-div {
     width: 100%;
-
+    min-height: calc(100vh - 180px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,8 +21,8 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: blue;
-    opacity: 80%;
+    background-color: black;
+    color: white;
     padding-left: 4vw;
     padding-right: 4vw;
 
@@ -36,6 +36,7 @@
 .gym-header h3{
     font-size: calc(1.5px + 2vw);
     justify-content: right;
+    font-style: italic;
 }
 
 .gym-body{
@@ -43,28 +44,61 @@
     flex-direction: column;
     width: 70%;
     margin: auto;
-    background-color: lightskyblue;
+    margin-top: 50px;
+    color: white;
 }
 
 .rating{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
 .rating h5{
     font-size: calc(1.3px + 2vw);
 }
 
-.rating button{
-    font-size: calc(1.3px + 2vw);
-    background-color: black;
-    border-color: white;
+.gym-button { 
+    background-color: rgb(29, 97, 243);
     color: white;
-    padding: 1vw;
-    border-width: 0.2vw;
-}
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    width: 150px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .gym-button:hover { 
+    cursor: pointer;
+    opacity: 0.8;
+  }
 
 .gym-body p{
     font-size: calc(1.5px + 1.5vw);
+}
+
+.gym-category { 
+    margin: 0px;
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+.gym-category-description { 
+    margin-top: 0px;
+    margin-bottom: 10px; 
+    font-size: 20px;
+
+}
+
+.result-link { 
+    margin: 0px; 
+    padding: 0px;
+}
+
+.slidecontainer { 
+    width:700px;
 }
