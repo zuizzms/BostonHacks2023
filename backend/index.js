@@ -18,7 +18,7 @@ app.use((req, res, next) => {
         next()
 })
 
-// routes
+// ROUTES
 
 //Search page
 app.get('/gyms', async(req, res) => {
@@ -32,23 +32,23 @@ app.get('/gyms', async(req, res) => {
         }
 })
 //Individual gym page
-app.get('/gyms/:id', async(req, res) => {
+app.get('/gym', async(req, res) => {
         try {
-                const {id} = req.params;
-                const gym = await Gym.findById('65593c776c8fe91a2e03ce17')
+                const id = req.query.id;
+                const gym = await Gym.findById(id)
                 res.status(200).json(gym)
         } catch (error) {
                 res.status(500).json({message: error.message})
         }
 })//Update rating
-app.put('/updateRating', async(req, res) => {
+app.put('/updateRating/:id', async(req, res) => {
         try {
-                const {realId} = req.params.id;
-                const {updateData} = req.params.data;
-                const {id} = '65593c776c8fe91a2e03ce17'
-                const testBody = {
-                        "gymName" : "BBBB"
-                };
+                const id = req.query.id;
+                const updateData = req.body;
+                // const {id} = '65593c776c8fe91a2e03ce17'
+                // const testBody = {
+                //         "gymName" : "BBBB"
+                // };
 
                 const data = await Gym.findById(id)
 
@@ -57,8 +57,10 @@ app.put('/updateRating', async(req, res) => {
                 data.ageRating = (data.ageRating * data.numRatings + updateData.ageRating) / (data.numRatings + 1)                
                 data.numRatings += 1
 
-                const gym = await Gym.findByIdAndUpdate(id, data)
-                if(!gym) {
+                console.log(data, id)
+
+                const success = await Gym.findByIdAndUpdate(id, data)
+                if(!success) {
                         return res.status(404).json({message: "cannot find gym"})
                 }
                 res.status(200).json(gym)
@@ -67,7 +69,7 @@ app.put('/updateRating', async(req, res) => {
         }
 })
 
-mongoose.connect("mongodb+srv://zuizzms:bostonhacks2023@cluster0.dnmuxsi.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://jeff:bostonhacks2023@cluster0.dnmuxsi.mongodb.net/?retryWrites=true&w=majority")
         .then(() => {
                 app.listen(port, () => {
                         console.log("connected to DB and listening on port" + port)
