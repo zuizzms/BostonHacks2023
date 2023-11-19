@@ -18,7 +18,7 @@ function Home(){
         <Wrapper>
             <img src = {gymPic} alt = "photo of a gym"></img>
             <div className = "main-content">
-               <h3>See What Others Think About Your Gym</h3>
+               <h3>See What Others <br></br>Think About Your Gym</h3>
                 <div id = "nav-wrapper">
                     <NavLink to='/results'>
                         <button className='home-results-button'>Results</button>
