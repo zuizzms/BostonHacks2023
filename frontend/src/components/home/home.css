@@ -7,10 +7,10 @@
   background-color: rgba(0,0,0,75%);
   opacity: 75%;
   color: cornsilk;
-  border-radius: 75%;
   font-family: Roboto;
   font-size: calc(5px + 2vw);
   z-index: 1.0;
+  border-radius: 50%;
   position: absolute;
   width: 40%;
   margin-top: auto;
