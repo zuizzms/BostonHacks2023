@@ -1,4 +1,5 @@
 .home-main-content{
+  background-color: black;
   display: flex;
   flex-direction: column; 
   align-items: center;
@@ -9,7 +10,25 @@
 .home-title { 
   font-size: 50px;
   width: 500px;
-  margin: 0px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  color: white;
+  display: flex; 
+}
+
+
+.home-find { 
+  margin-right: 10px;
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+  margin-left: 0px;
+}
+
+.home-boston { 
+  margin: 0px; 
+  text-decoration: underline;
 }
 
 .home-results-button { 
