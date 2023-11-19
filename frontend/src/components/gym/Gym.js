@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import "./gym.css";
 
 const Wrapper = styled.div`
   display: flex;
