@@ -6,25 +6,7 @@ import useSWR from 'swr'
 
 function Results() {
 
-  const {data} = useSWR('/gyms', () => fetch('http://localhost:8080/gyms').then(res => res.json()))
-
-  const Results = [
-      {
-        gymName: "Gym 1",
-        gymAddress: "123 Main St",
-        gymRating: "4.5"
-      },
-      {
-        gymName: "Gym 2",
-        gymAddress: "456 Main St",
-        gymRating: "4.0"
-      },
-      {
-        gymName: "Gym 3",
-        gymAddress: "789 Main St",
-        gymRating: "3.5"
-      }
-    ];
+  const {data} = useSWR('/api/gyms', () => fetch('http://localhost:8080/api/gyms/').then(res => res.json()))
 
   return (
     <div className="results-div"> 
@@ -32,7 +14,7 @@ function Results() {
         {data?.map(result => (
           <Result 
             key={result.gymName}
-            documentId={result.documentId}
+            documentID= {result._id}
             gymName={result.gymName}
             gymAddress={result.address}
             gymRating={result.gymRating}

@@ -1,19 +1,29 @@
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import "./gym.css";
+import {useState} from 'react';
 import { useParams } from "react-router-dom";
-import useSWR from "swr";
-import result from "../result/Result";
-import Result from "../result/Result";
+import useSWR from 'swr';
 
-function Gym(){
+function Gym() {
     const { documentID } = useParams();
-    const {data} = useSWR('/gyms', () => fetch(`http://localhost:8080/gyms`).then(res => res.json()))
+    const url = 'http://localhost:8080/Gym/' + documentID;
+    const {data} = useSWR('/', () => fetch('http://localhost:8080/Gym/').then(res => res.json()))
+    // const Home = () => {
+    //     const { documentID } = useParams();
+    //     const [data, setData] = useState(null);
+    //     const url = 'http://localhost:8080/api/gym/' + documentID;
     
+    //     useEffect(() => {
+    //         useSWR('/', () => fetch(url))
+    //         .then((res) => res.json())
+    //         .then((data) => setData(data));
+    // }, []);
+
     return(
         <div className='gym-div'> 
-             <div className = "main-content2">
+             <div className = " in-content">
                 <div className = "gym-header">
                     <h1>Gym Name Placeholder</h1>
                     <h3>Gym Address Placeholder</h3>
@@ -25,9 +35,9 @@ function Gym(){
                         <button>Rate this Gym</button>
                         </NavLink>
                     </div>
-                    <p>LGBTQ+ Friendliness: </p>
-                    <p>Gender Diversity: </p>
-                    <p>Age Diversity: </p>
+                    <p>LGBTQ+ Friendliness: {data.lgbtRating}</p>
+                    <p>Gender Diversity: {data.genderRating}</p>
+                    <p>Age Diversity: {data.ageRating}</p>
                 </div>
             </div>
         </div>
