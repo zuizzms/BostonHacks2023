@@ -1,0 +1,31 @@
+.rating-header{
+    display: flex;
+    flex-direction: column;
+    background-color: darkred;
+}
+
+.rating-header h2{
+    color: cornsilk;
+    font-size: calc(2px + 2vw);
+}
+
+.rating-header h4{
+    color: cornsilk;
+    font-size: calc(1.8px + 2vw);
+}
+
+.rating-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: cornsilk;
+    font-family: Roboto;
+}
+
+.rating-body input{
+    border-color: darkred;
+    color: black;
+    background-color: cornsilk;
+    border-width: 5vw;
+}
