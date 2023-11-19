@@ -7,9 +7,11 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 80%;
+  align-items: center;
+  width: 100%;
 `
-function Rating(gymID){
+
+function Rating(){
 
     const[lgbtqRating, setLGBTRating] = useState('');
     const[genderRating, setGenderRating] = useState('');
@@ -42,7 +44,7 @@ function Rating(gymID){
     return(
         <Wrapper>
             <div className = "rating-header">
-                <h2>{gymName}</h2>
+                <h2></h2>
                 <h4>Rate this gym according to these categories!</h4>
             </div>
             <div className = "rating-body">

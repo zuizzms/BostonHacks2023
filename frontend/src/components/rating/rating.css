@@ -22,7 +22,9 @@
     background-color: black;
     color: cornsilk;
     font-family: Roboto;
-    z-index: 0.5;
+
+    width: 80%;
+
 }
 
 .rating-body input{
@@ -30,6 +32,10 @@
     color: black;
     background-color: cornsilk;
     border-width: 5vw;
+
+    margin-top: 20px;
+}
+
 }
 
 .alert-window{

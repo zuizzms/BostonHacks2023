@@ -5,6 +5,7 @@ import Results from './components/results-page/Results';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 import Gym from './components/gym/Gym';
+import Rating from './components/rating/Rating';
 import React, {useState, useEffect} from 'react';
 
 
@@ -25,7 +26,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Results" element={<Results />} />
-          <Route path="/Gym" element={<Gym />} />
+          <Route path="/Gym/:documentID" element={<Gym />} />
+          <Route path="/Rating" element={<Rating />} />
         </Routes>
           <Footer/>
       </BrowserRouter>

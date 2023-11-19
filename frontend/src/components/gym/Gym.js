@@ -4,17 +4,10 @@ import {NavLink} from "react-router-dom";
 import "./gym.css";
 import { useParams } from "react-router-dom";
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 80%; 
-`
 function Gym(){
     const { DocumentId } = useParams();  
 
     
-
-
     return(
         <div className='gym-div'> 
              <div className = "main-content">
