@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import "./gym.css";
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   margin: 80%;
 `
-export function Gym(gymName, gymAddress, oRating, iRating, aRating){
+export function Gym(gymName, gymAddress, oRating, lRating, gRating, aRating){
 
 
     return(
@@ -24,8 +25,9 @@ export function Gym(gymName, gymAddress, oRating, iRating, aRating){
                             <button>Rate this Gym</button>
                         </Link>
                     </div>
-                    <p>{iRating} Inclusivity</p>
-                    <p>{aRating} Availability</p>
+                    <p>LGBTQ+ Friendliness: {lRating}</p>
+                    <p>Gender Diversity: {gRating}</p>
+                    <p>Age Diversity: {aRating}</p>
                 </div>
             </div>
         </Wrapper>
