@@ -72,7 +72,7 @@ function Rating(gymID){
                        onChange = {(event) => setAgeRating(event.target.value)}
                        required>
                 </input>
-                <button onClick = sendToDB>Submit</button>
+                <button onClick = {sendToDB}>Submit</button>
                 <div className = "alert-window" style = {{visibility: boxVisible ? 'visible':'hidden'}}>
                     <div className = "alert-window-child">
                         <p>Thank you for rating!</p>
