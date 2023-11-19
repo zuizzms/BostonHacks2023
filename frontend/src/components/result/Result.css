@@ -1,7 +1,13 @@
 .result-div { 
-  background-color: gray;
-  width: 400px;  
-  padding: 15px;
+  display: flexbox;
+  justify-content: space-between;
+  background-color: rgb(20, 70, 170);
+  width: 80vw;
+  padding: 30px;
+}
+
+.result-div:hover {
+  background-color: rgb(17, 57, 135);
 }
 
 .result-link { 

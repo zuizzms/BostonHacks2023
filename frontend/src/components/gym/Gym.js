@@ -1,20 +1,29 @@
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import "./gym.css";
+import {useState} from 'react';
+import { useParams } from "react-router-dom";
+import useSWR from 'swr';
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 80%;
-`
-export function Gym(documentId){
-    const url = 'http://localhost:8080/api/gym/' + documentId;
-    const {data} = useSWR('api/gym/', () => fetch(url).then(res => res.json()))
+function Gym() {
+    const { documentID } = useParams();
+    const url = 'http://localhost:8080/Gym/' + documentID;
+    const {data} = useSWR('/', () => fetch('http://localhost:8080/Gym/').then(res => res.json()))
+    // const Home = () => {
+    //     const { documentID } = useParams();
+    //     const [data, setData] = useState(null);
+    //     const url = 'http://localhost:8080/api/gym/' + documentID;
+    
+    //     useEffect(() => {
+    //         useSWR('/', () => fetch(url))
+    //         .then((res) => res.json())
+    //         .then((data) => setData(data));
+    // }, []);
 
     return(
-        <Wrapper>
-            <div className = "main-content">
+        <div className='gym-div'> 
+             <div className = " in-content">
                 <div className = "gym-header">
                     <h1>{gymName}</h1>
                     <h3>{gymAddress}</h3>
@@ -26,11 +35,11 @@ export function Gym(documentId){
                             <button>Rate this Gym</button>
                         </NavLink>
                     </div>
-                    <p>LGBTQ+ Friendliness: {lRating}</p>
-                    <p>Gender Diversity: {gRating}</p>
-                    <p>Age Diversity: {aRating}</p>
+                    <p>LGBTQ+ Friendliness: {data.lgbtRating}</p>
+                    <p>Gender Diversity: {data.genderRating}</p>
+                    <p>Age Diversity: {data.ageRating}</p>
                 </div>
             </div>
-        </Wrapper>
+        </div>
     )
 }
