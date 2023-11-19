@@ -5,7 +5,7 @@ import "./footer.css";
 function Footer(){
     return(
     <div id = "footer">
-        <p>Find the right gym for you</p>
+        <p className='footer-text'>Find the right gym for you</p>
     </div>
     )
 }
