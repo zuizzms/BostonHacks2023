@@ -6,6 +6,9 @@ import { NavLink } from 'react-router-dom';
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction:column;
+  align-self: center;
+  background-color: darkslategrey;
 `;
 
 

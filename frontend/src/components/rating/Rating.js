@@ -48,7 +48,7 @@ function Rating(){
     return(
         <Wrapper>
             <div className = "rating-header">
-                <h2></h2>
+                <h2>Gym Name Placeholder</h2>
                 <h4>Rate this gym according to these categories!</h4>
             </div>
             <div className = "rating-body">
