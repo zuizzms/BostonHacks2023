@@ -44,18 +44,20 @@ app.get('/api/Gym/:id', async(req, res) => {
 })//Update rating
 app.put('/api/UpdateRating/:id', async(req, res) => {
         try {
-                const id = req.query.id;
+                console.log("Reached Backend!")
+                const id = req.params.id;
                 const updateData = req.body;
 
                 const data = await Gym.findById(id)
+                console.log(data)
 
-                data.lgbtRating = (data.lgbtRating * data.numRatings + updateData.lgbtRating) / (data.numRatings + 1)
-                data.genderRating = (data.genderRating * data.numRatings + updateData.genderRating) / (data.numRatings + 1)                
-                data.ageRating = (data.ageRating * data.numRatings + updateData.ageRating) / (data.numRatings + 1)                
+                // data.lgbtRating += Number(updateData.lgbtRating)
+                // data.genderRating += Number(updateData.genderRating)
+                // data.ageRating += Number(updateData.ageRating)
+                data.genderRating = ((data.genderRating * data.numRatings) + Number(updateData.genderRating)) / (data.numRatings + 1.0); 
+                data.lgbtRating = ((data.lgbtRating * data.numRatings) + Number(updateData.lgbtRating)) / (data.numRatings + 1.0);             
+                data.ageRating = ((data.ageRating * data.numRatings) + Number(updateData.ageRating)) / (data.numRatings + 1.0);         
                 data.numRatings += 1
-
-                console.log(data, id)
-
                 const success = await Gym.findByIdAndUpdate(id, data)
                 if(!success) {
                         return res.status(404).json({message: "cannot find gym"})

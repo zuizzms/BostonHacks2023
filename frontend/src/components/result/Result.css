@@ -1,4 +1,5 @@
 .result-div { 
+
   margin-top: 40px;
 }
 .result-gyms { 
@@ -7,6 +8,7 @@
   height: 125px;
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   text-align: center;
   margin: auto;
@@ -17,6 +19,7 @@
 .result-gyms:hover { 
   cursor: pointer; 
   opacity: 0.8;
+
 }
 
 
