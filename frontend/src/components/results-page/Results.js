@@ -32,7 +32,7 @@ function Results() {
         {data?.map(result => (
           <Result 
             key={result.gymName}
-            id={result.query.id}
+            // id={result.query.id}
             gymName={result.gymName}
             gymAddress={result.gymAddress} 
             gymRating={result.gymRating}
