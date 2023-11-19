@@ -15,8 +15,8 @@ function Gym(){
         <div className='gym-div'> 
              <div className = "main-content2">
                 <div className = "gym-header">
-                    <h1></h1>
-                    <h3></h3>
+                    <h1>Gym Name Placeholder</h1>
+                    <h3>Gym Address Placeholder</h3>
                 </div>
                 <div className = "gym-body">
                     <div className = "rating">
