@@ -4,3 +4,7 @@
 2nd Terminal: cd into front end and run npm start
 https://cloud.mongodb.com/v2/6558f0c5d537e45dd0159259#/overview
 
+FINAL VIDEO WALKTHROUGH:
+https://devpost.com/software/ratemygym
+
+
